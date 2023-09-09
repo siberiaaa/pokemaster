@@ -53,7 +53,7 @@ function ModalCreate(){
     a.addEventListener('click', (e) => {
     e.preventDefault();
     document.documentElement.style.setProperty('--displaymodal', 'none');
-    location.href = "../login.html";
+    location.href = "../index.html";
     });
 
     sectionmodal.appendChild(a);
