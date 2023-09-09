@@ -11,7 +11,7 @@ function SpinnerOff(){
 /*--------------- Log Out ---------------*/
 function LogOut() {
     localStorage.removeItem('jwt');
-    location.href = '../login/login.html';
+    location.href = '../login.html';
 }
 
 const buttonLogOut = document.querySelector('#logout');
