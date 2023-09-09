@@ -1,0 +1,161 @@
+:root {
+    --base-btn: #d6d6d6;
+    --hover-btn: #c5c5c5;
+    --shadow-btn: #838383;
+    --border-btn: #1a1a1a;
+  }
+
+.eightbit-btn {
+    background: var(--base-btn);
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    box-shadow: inset -4px -4px 0px 0px var(--shadow-btn);
+}
+
+
+.eightbit-btn:hover {
+    background: var(--hover-btn);
+    box-shadow: inset -6px -6px 0px 0px var(--shadow-btn);
+}
+
+.eightbit-btn:active {
+    box-shadow: inset 4px 4px 0px 0px var(--shadow-btn);
+}
+
+/**/
+.eightbit-btn:before, .eightbit-btn:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.eightbit-btn:before {
+    top: -6px;
+    left: 0;
+    border-top: 6px var(--border-btn) solid;
+    border-bottom: 6px var(--border-btn) solid;
+}
+.eightbit-btn:after {
+    left: -6px;
+    top: 0;
+    border-left: 6px var(--border-btn) solid;
+    border-right: 6px var(--border-btn) solid;
+}
+
+/*red button*/
+.red-btn {
+    background: rgb(255, 90, 126);
+    box-shadow: inset -4px -4px 0px 0px rgb(229, 0, 69);
+}
+
+.red-btn:before {
+    border-top: 6px black solid;
+    border-bottom: 6px black solid;
+}
+.red-btn:after {
+    border-left: 6px black solid;
+    border-right: 6px black solid;
+}
+
+.red-btn:hover {
+    background: rgb(255, 61, 103);
+    box-shadow: inset -6px -6px 0px 0px rgb(229, 0, 69);
+}
+
+.red-btn:active {
+    box-shadow: inset 4px 4px 0px 0px rgb(229, 0, 69);
+}
+
+/*yellow button*/
+.yellow-btn {
+    background: rgb(255, 211, 105);
+    box-shadow: inset -4px -4px 0px 0px rgb(224, 159, 7);
+}
+
+.yellow-btn:before {
+    border-top: 6px black solid;
+    border-bottom: 6px black solid;
+}
+.yellow-btn:after {
+    border-left: 6px black solid;
+    border-right: 6px black solid;
+}
+
+.yellow-btn:hover {
+    background: rgb(245, 192, 68);
+    box-shadow: inset -6px -6px 0px 0px rgb(224, 159, 7);
+}
+
+.yellow-btn:active {
+    box-shadow: inset 4px 4px 0px 0px rgb(224, 159, 7);
+}
+
+
+
+
+
+
+
+.eightbit-input{
+    box-sizing: border-box;
+    border: 3px rgb(153, 153, 153) solid;
+}
+
+
+
+
+
+
+
+.pokemonspinner {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50% );
+    border: 8px solid black;
+    animation: spin 1.5s linear infinite;
+  }
+  
+  .pokemonspinner::before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 100px;
+    background: black;
+    top: 50px;
+    transform: translatey(-50%);
+  }
+  
+  .pokemonspinner::after {
+    content: '';
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background: white;
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+  
+  }
+  
+  /* Spin Animation */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+ 

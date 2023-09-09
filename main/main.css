@@ -1,0 +1,417 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(./../assets/PressStart2P-Regular.ttf);
+}
+
+*{
+    font-family: "Press Start 2P";
+}
+:root{
+    --displaymodal: none;
+    --displaymodalcatch: none;
+    --displaymodalpoke: none;
+    --displayspinner: none;
+}
+
+
+body{
+    min-height: 100vh;
+    /*width: 100vw;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: rgb(13, 15, 17);
+    color: rgb(32, 32, 32);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1{    
+    font-size: 45px;
+    color: rgb(216, 216, 216);
+    margin: 30px 30px;
+}
+
+header a{
+    margin: 10px 30px;
+}
+nav{
+    display: flex;
+    padding: 30px;
+    margin: 10px;
+
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20%;
+    row-gap: 20%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 60%;
+    min-width: 325px;
+    min-height: 80px;
+        
+    background-color: rgb(13, 29, 44);
+    border: 8px rgb(5, 17, 29) solid;
+    
+}
+
+nav a{
+    height: 30px;
+    color: rgb(216, 216, 216);
+}
+
+nav input{
+    font-size: 18px;
+}
+nav label{
+    color: rgb(216, 216, 216);
+    font-size: 20px;
+}
+
+section.pokedex, article{
+    display: flex;
+}
+
+article{
+    padding:70px;
+    align-items: center;
+    flex-direction: column;
+
+    width: 60%;
+    min-height: 700px;
+    min-width: 325px;
+    
+    background-color: rgb(238, 188, 23);
+    border: 8px rgb(27, 27, 27) solid;
+    
+}
+
+article label{
+    align-self: flex-end;
+
+    margin: 20px;
+}
+
+section.pokedex{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    width: 100%;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    list-style: none; 
+}
+
+.pokedex li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.445);
+    border: 6px rgb(34, 34, 34) solid;
+
+    margin-bottom: 20px;
+    
+}
+
+.pokedex section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+    width: 50%; 
+
+}
+
+
+.pokedex img{
+    min-width: 250px;
+    
+}
+
+img.filter {
+    filter: brightness(0%);
+    
+}
+
+.pokedex section div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 25%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pokedex section p{
+    font-size: 23px;
+    margin: 25px 10px
+}
+
+.pokedex section div p{
+    border: 3px rgb(24, 24, 24) solid;
+    padding: 7px;
+
+    margin-top: 20px;
+    font-size: 18px;
+    /*background-color: rgb(255, 255, 255);*/
+}
+
+.normal{
+    background-color: #A8A77A;
+}
+.fire{
+    background-color: #EE8130;
+}
+.water{
+    background-color: #6390F0;
+}
+.electric{
+    background-color: #F7D02C;
+}
+.grass{
+    background-color: #7AC74C;
+}
+.ice{
+    background-color: #96D9D6;
+}
+.fighting{
+    background-color: #C22E28;
+}
+.poison{
+    background-color: #A33EA1;
+}
+.ground{
+    background-color: #E2BF65;
+}
+.flying{
+    background-color: #A98FF3;
+}
+.psychic{
+    background-color: #F95587;
+}
+.bug{
+    background-color: #A6B91A;
+}
+.rock{
+    background-color: #B6A136;
+}
+.ghost{
+    background-color: #735797;
+}
+.dragon{
+    background-color: #6F35FC;
+}
+.dark{
+    background-color: #705746;
+}
+.steel{
+    background-color: #B7B7CE;
+}
+.fairy{
+    background-color: #D685AD;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- modal ---*/
+
+article.modal{
+    display: var(--displaymodal); 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.485);
+
+    animation-name: opacity;
+    animation-duration: 0.4s
+}
+
+@keyframes opacity {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+section.modal-content{
+    box-sizing: content-box;
+    background-color: rgba(255, 210, 105, 0.945);
+    width: 60%;
+    height: 20%;
+    max-width: 700px;
+    padding: 10px;
+
+    font-size: 20px;
+    border: 8px rgb(0, 0, 0) solid;
+}
+
+#accept{
+    margin: 15px;
+    font-size: 20px;
+    height: 25px;
+}
+
+
+
+
+
+
+
+/* --- modalcatch ---*/
+
+article.modalcatch{
+    display: var(--displaymodalcatch); 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.485);
+
+    animation-name: opacity;
+    animation-duration: 0.4s
+}
+
+@keyframes opacity {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+section.modalcatch-content{
+    box-sizing: content-box;
+    background-color: rgba(255, 210, 105, 0.945);
+    width: 60%;
+    height: 20%;
+    max-width: 700px;
+    padding: 10px;
+
+    font-size: 20px;
+    border: 8px rgb(0, 0, 0) solid;
+}
+
+#acceptcatch{
+    margin: 15px;
+    font-size: 20px;
+    height: 25px;
+}
+
+
+/* --- modal poke show ---*/
+
+article.modalpoke{
+    display: var(--displaymodalpoke); 
+    padding: 80px 0px;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.485);
+
+    animation-name: opacity;
+    animation-duration: 0.4s
+}
+
+@keyframes opacity {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+section.modalpoke-content{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: rgba(31, 31, 31, 0.973);
+    width: 20%;
+    min-width: 370px;
+    padding: 10px;
+
+    font-size: 20px;
+    color: rgb(247, 247, 247);
+    border: 8px rgb(0, 0, 0) solid;
+}
+
+section.modalpoke-content div{
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+section.modalpoke-content p{
+    margin: 20px;
+}
+
+#acceptpoke{
+    margin: 15px;
+    font-size: 20px;
+    height: 25px;
+}
+
+
+
+.type{
+    border: 3px rgb(24, 24, 24) solid;
+    padding: 7px;
+
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+
+ /* --- modal spinner ---*/
+
+ article.modalspinner{
+    display: var(--displayspinner); 
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    z-index: 2; 
+    left: 0;
+    padding: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.485);
+}
+

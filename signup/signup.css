@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(./../assets/PressStart2P-Regular.ttf);
+}
+
+:root{
+    --displaymodal: none;
+    --displayspinner: none;
+}
+
+*{
+    font-family: "Press Start 2P";
+}
+
+body{
+    min-height: 100vh;
+    /*width: 100vw;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: rgb(34, 40, 49);
+    color: rgb(238, 238, 238);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 40px;
+    margin: 40px;
+}
+
+article{
+    width: 70%;
+}
+
+section, article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+}
+
+label{
+    font-size: 22px;
+    margin: 10px;
+}
+
+.signup input{
+    font-size: 20px;
+    width: 350px;
+}
+.signup a{
+    font-size: 28px;
+    height: 40px;
+    width: 200px;
+    margin: 40px;
+}
+
+section.options{
+    margin: 20px 0px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.options a{
+    margin: 20px 10px;
+    
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-decoration: none;
+    
+    
+    
+}
+.options a:hover{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+.options a:active{
+    color: rgb(143, 143, 143);
+}
+
+
+
+/* --- modal ---*/
+
+article.modal{
+    display: var(--displaymodal); 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.485);
+
+    animation-name: opacity;
+    animation-duration: 0.4s
+}
+
+@keyframes opacity {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+
+section.modal-content{
+    box-sizing: content-box;
+    background-color: rgba(255, 210, 105, 0.945);
+    width: 60%;
+    height: 22%;
+    max-width: 700px;
+    padding: 25px;
+
+    font-size: 20px;
+    border: 8px rgb(0, 0, 0) solid;
+}
+
+#accept{
+    margin: 15px;
+    font-size: 20px;
+    height: 25px;
+}
+
+
+
+ /* --- modal spinner ---*/
+
+ article.modalspinner{
+    display: var(--displayspinner); 
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.485);
+}
+
