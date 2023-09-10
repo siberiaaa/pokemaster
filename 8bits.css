@@ -98,7 +98,29 @@
 }
 
 
+/*green button*/
+.green-btn {
+    background: rgb(98, 240, 70);
+    box-shadow: inset -4px -4px 0px 0px rgb(36, 92, 4);
+}
 
+.green-btn:before {
+    border-top: 6px black solid;
+    border-bottom: 6px black solid;
+}
+.green-btn:after {
+    border-left: 6px black solid;
+    border-right: 6px black solid;
+}
+
+.green-btn:hover {
+    background: rgb(54, 189, 27);
+    box-shadow: inset -6px -6px 0px 0px rgb(36, 92, 4);
+}
+
+.green-btn:active {
+    box-shadow: inset 4px 4px 0px 0px rgb(36, 92, 4);
+}
 
 
 
