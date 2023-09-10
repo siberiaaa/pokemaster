@@ -363,7 +363,8 @@ section.modalpoke-content{
     min-width: 255px;
     padding: 10px;
 
-    max-height: 87%;
+    /*max-height: 87%;*/
+    overflow: auto;
 
     font-size: 20px;
     color: rgb(247, 247, 247);
@@ -391,7 +392,7 @@ section.modalpoke-content a{
 }
 
 section.modalpoke-content p{
-    margin: 20px;
+    margin: 10px;
 }
 
 #acceptpoke{
