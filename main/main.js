@@ -11,7 +11,7 @@ function SpinnerOff(){
 /*--------------- Log Out ---------------*/
 function LogOut() {
     localStorage.removeItem('jwt');
-    location.href = '../index.html';
+    location.href = '../login/login.html';
 }
 
 const buttonLogOut = document.querySelector('#logout');
@@ -88,7 +88,6 @@ function CreatePokeShow(poke) {
     div1.appendChild(p3);
     div1.appendChild(p4);
 
-    /*---------------- Supuestamente los tipos no venían en array? x2 ----------------*/
     let type1 = '';
 
     let type2 = '';
@@ -150,6 +149,7 @@ function AddAcceptButton(){
     a.setAttribute('href', '');
     a.setAttribute('draggable', 'false');
     a.classList.add('eightbit-btn');
+    a.classList.add('yellow-btn');
 
     a.addEventListener('click', (e) => {
         e.preventDefault();
@@ -234,6 +234,7 @@ function AddCancelCatchButton(){
     a.setAttribute('href', '');
     a.setAttribute('draggable', 'false');
     a.classList.add('eightbit-btn');
+    a.classList.add('red-btn');
 
     const a2 = document.createElement('a');
     a2.innerHTML = 'Catch';
@@ -241,7 +242,7 @@ function AddCancelCatchButton(){
     a2.setAttribute('href', '');
     a2.setAttribute('draggable', 'false');
     a2.classList.add('eightbit-btn');
-    a2.classList.add('red-btn');
+    a2.classList.add('green-btn');
 
     a.addEventListener('click', (e) => {
         document.documentElement.style.setProperty('--displaymodalpoke', 'none');
@@ -254,8 +255,9 @@ function AddCancelCatchButton(){
     });
 
     const div = document.createElement('div');
-    div.appendChild(a);
+    div.classList.add('wrap');
     div.appendChild(a2);
+    div.appendChild(a);
 
     modalpokecontent.appendChild(div);
 }
@@ -524,6 +526,10 @@ searchInput.addEventListener('input', updateArrayShow);
 
 /*---------------- load page ----------------*/
 fillPokedex();
+
+
+
+
 
 
 
