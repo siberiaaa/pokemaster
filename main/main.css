@@ -104,7 +104,7 @@ article label{
     margin: 20px;
 }
 
-section.pokedex{
+article.pokedex section.pokedex{
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -159,7 +159,7 @@ img.filter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    column-gap: 25%;
+    column-gap: 10px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -335,7 +335,7 @@ section.modalcatch-content{
 
 article.modalpoke{
     display: var(--displaymodalpoke); 
-    padding: 80px 0px;
+    padding: 3% 0px;
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -359,21 +359,35 @@ section.modalpoke-content{
     flex-direction: column;
     
     background-color: rgba(31, 31, 31, 0.973);
-    width: 20%;
-    min-width: 370px;
+    width: 25%;
+    min-width: 255px;
     padding: 10px;
+
+    max-height: 87%;
 
     font-size: 20px;
     color: rgb(247, 247, 247);
     border: 8px rgb(0, 0, 0) solid;
+
 }
 
 section.modalpoke-content div{
     display: flex;
     
     flex-direction: row;
+    
     justify-content: space-around;
 
+}
+
+section.modalpoke-content div.wrap{
+    flex-wrap: wrap;
+}
+
+
+section.modalpoke-content a{
+
+    margin: 10px 5px;
 }
 
 section.modalpoke-content p{
